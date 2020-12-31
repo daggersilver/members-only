@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const mongoose = require("mongoose");
 const path = require("path");
-const mongoURL =`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.s6okb.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority` || 'mongodb://localhost:27017/membersOnly';
+const mongoURL ='mongodb://localhost:27017/membersOnly';
 const port = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const flash = require('express-flash');
