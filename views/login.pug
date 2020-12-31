@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Login
+        link(rel="stylesheet" href="/style.css" type="text/css")
+    body
+        h1.login-h1 Login
+        if success!="Successfully Registered"
+            h2.login-h2 Or 
+                a(href="/users/register") Register
+        each msg in success
+            p.success=msg
+        if failureFlash.length!=0
+            p.error=failureFlash
+        form.login-form(method="POST" action="/users/login")
+            label(for="username") Username
+            input(type="text" autocomplete="off" id="username" name="username") 
+            label(for="password") Password
+            div
+                input(type="password" autocomplete="off" id="password" name="password") 
+                button.show(type="button") Show
+            input(type="submit" value="Submit")
+    script(src="/script.js")

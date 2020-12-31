@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title MemberShip
+        link(rel="stylesheet" href="/style.css" type="text/css")
+    body.secret-code
+        h1.login-h1 Become Member
+        each err in error
+            p.error=err
+        form.login-form(method="POST" action="/members")
+            label.darken(for="secret") Enter The Secret PassCode
+            input(type="text" autocomplete="off" id="secret" name="secret" ) 
+            input(type="submit" value="Submit")
+        footer
+            p Don's sweat it muchachos, passcode ==> blue-cat-is-not-blue

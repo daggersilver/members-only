@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Login
+        link(rel="stylesheet" href="/style.css" type="text/css")
+    body
+        h1.login-h1 Create Message
+        each err in msgError
+            p.error=err
+        form.login-form.register-form.message-form(method="POST" action="/message")
+            label(for="title") Title
+            input(type="text" autocomplete="off" id="title" name="title" maxlength="20" placeholder="please keep the title short") 
+            label(for="message") Message
+            textarea(name="message", cols="30", rows="10" placeholder="Enter the Message Here")
+            input(type="submit" value="Submit")

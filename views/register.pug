@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Register
+        link(rel="stylesheet" href="/style.css" type="text/css")
+    body
+        h1.login-h1 Register
+        h2.login-h2 Or 
+            a(href="/users/login") Login
+        each err in error
+            p.error=err
+        form.login-form.register-form(method="POST" action="/users/register")
+            label(for="name") Name
+            input(type="text" autocomplete="off" id="name" name="name" ) 
+            label(for="email") Email
+            input(type="email" autocomplete="off" id="email" name="email") 
+            label(for="username") Username
+            input(type="text" autocomplete="off" id="username" name="username" maxlength="25") 
+            label(for="password") Password
+            input(type="password" autocomplete="off" id="password" name="password") 
+            label(for="confirm") Confirm Password
+            input(type="text" autocomplete="off" id="confirm" name="confirm") 
+            input(type="submit" value="Submit")

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Members Only
+        link(rel="stylesheet" href="/style.css" type="text/css")
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet")
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet")
+    body.index-body
+        nav.nav
+            h1 Members Only
+            span 
+                if user
+                    a(href="/message") Message
+                    a(href="/users/logout") LogOut
+                else
+                    a(href="/users/register") Sign Up
+                    a(href="/users/login") Log In
+
+        if success.length!=0
+            p.success=success
+        if error.length!=0
+            p.error=error
+        if !user
+            div.loginbox Please LogIn to see the contents of messages
+        div.container 
+            each msg in messages
+                div.msg-tile
+                    if user
+                        h2 Title: #{msg.title}
+                        p.author-parent Written by:
+                            p.author=msg.author
+                        div
+                            p.msg-parent Message: 
+                                P.textmsg=msg.msg
+                        p.date=msg.date
+                    else 
+                        h2 Title is Hidden
+                        p.author-parent Written by:
+                            p.author=msg.author
+                        div
+                            p.msg-parent Message: 
+                                P.textmsg Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium amet aperiam non iure nemo similique ipsam quo eum voluptatibus impedit.
+                        p.date Please login to see the content
+        
+        footer.index-footer 
+            if user
+                if user.isMember
+                    p To avail more control, Become a   
+                        a(href="/admin") Admin
+                else
+                    p To Send messages, Become a   
+                        a(href="/members") Member
+            else
+                p To see messages,  
+                    a(href="/users/register") Register 
+            -var date = new Date().getFullYear();
+            p copyright &copy; blueCat ,  #{date}. All rights reserved

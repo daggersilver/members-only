@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Admin
+        link(rel="stylesheet" href="/style.css" type="text/css")
+    body
+        h1.login-h1 Become An Admin
+        if error
+            p.error=error
+        div.admin-instructions
+            h2 To become an admin is not an easy task. You'll have many responsibilities on your shoulders.
+            p.under Some of your duties:
+                ul  
+                    li Help other group members
+                    li delete abusive or falsy messages
+                    li maintain order in the discussion
+                    li and most importantly, Never misuse your position
+            p So are you ready
+            p Fulfil the form below, make sure you give a legit email. We will verify you and send you a response. This could take a week.
+        form.login-form(method="POST" action="/admin")
+            label(for="email") Email
+            input(type="email" autocomplete="off" id="email" name="email" required) 
+            input(type="submit" value="Submit")

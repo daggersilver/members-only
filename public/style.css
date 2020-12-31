@@ -1,0 +1,299 @@
+html *{
+    margin: 0;
+}
+body{
+    background-color: gainsboro;
+    font-family: sans-serif;
+    height: 100vh;
+}
+.login-form{
+    max-width: 400px;
+    height: 400px;
+    background-color: white;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 5%;
+    color: gray;
+}
+.login-form label{
+    width: fit-content;
+}
+.login-form div{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items:baseline;
+}
+.login-form input{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    border: 3px solid gray;
+    border-radius: 5px;
+    padding-left: 5%;
+    color: rgb(54, 53, 53);
+}
+.login-form textarea{
+    border: 3px solid gray;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    padding: 3%;
+    resize: none;
+}
+.message-form{
+    height: 450px !important;
+}
+.login-form .show{
+    width: 20%;
+    height: 30px;
+    border: 3px solid gray;
+    border-radius: 5px;
+    margin-left: 2px;
+    color: rgb(54, 53, 53);
+}
+.login-form .show:hover{
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+}
+.login-form input[type="submit"]:hover{
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+}
+.login-h1{
+    color: gray;
+    margin-top: 20px;
+    text-align: center;
+}
+.login-h2{
+    text-align: center;
+    color: gray;
+    padding-bottom: 30px;
+}
+.login-h2 a{
+    color: black;
+}
+.register-form{
+    height: 600px;
+}
+input:focus, button:focus, textarea:focus{
+    outline: none;
+}
+.error{
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid maroon;
+    background-color: pink;
+    color: rgb(211, 6, 6);
+    margin: 10px auto;
+    max-width: 400px;
+    text-align: center;
+}
+.success{
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid darkgreen;
+    background-color: lightgreen;
+    color: darkgreen;
+    margin: 10px auto;
+    max-width: 400px;
+    text-align: center;
+}
+
+.nav{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav *{
+    width: fit-content;
+    display: inline-block;
+    margin: 0 5%;
+}
+.nav span{
+    display: flex;
+}
+.nav a{
+    display: block;
+    width: 100px;
+    padding: 5px;
+    background-color: gray;
+    color: white;
+    border: 1px solid white;
+    text-decoration: none;
+    text-align: center;
+}
+.nav h1{
+    font-family: 'Redressed', cursive;
+}
+.container{
+    box-sizing: border-box;
+    background-color: pink;
+    padding: 5%;
+    max-width: 600px;
+    margin: 100px auto;
+    border: 7px solid black;
+    border-radius: 10px;
+}
+.msg-tile{
+    box-sizing: border-box;
+    padding: 5%;
+    background-color: white;
+    width: 90%;
+    border-radius: 20px;
+    margin: 40px auto;
+    font-weight: bold;
+}
+.msg-tile *{
+    margin: 10px auto;
+}
+.msg-tile p.author-parent{
+    display: inline;
+}
+.msg-tile p.author{
+    display: inline;
+    margin-left: 10px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    font-weight: normal;
+}
+.msg-tile div{
+    height: fit-content;
+    display: flex;
+    align-items: baseline;
+}
+.msg-tile div *{
+    margin: 0;
+}
+.msg-parent{
+    padding-right: 10px;
+}
+.textmsg{
+    color: rgb(116, 7, 7);
+    font-weight: normal;
+    line-height: 28px;
+}
+.msg-tile p.date{
+    margin-top: 20px;
+    font-size: 15px;
+    color: gray;
+}
+.msg-tile h2{
+    text-align: center;
+    font-family: serif;
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: 2.5px;
+    word-spacing: 5px;
+    color: rgb(3, 2, 32);
+    padding-bottom: 10px;
+    border-bottom: 2px solid pink;
+}
+.index-body{
+    background: url("backgroud.jpg") center repeat;
+    background-size: cover;
+    height: 100%;
+}
+.loginbox{
+    max-width: 600px;
+    margin: 40px auto;
+    box-sizing: border-box;
+    padding: 2% 5%;
+    border: 5px solid maroon;
+    background-color: rgb(250, 139, 139);
+    color: rgb(121, 6, 6);
+    font-weight: bold;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.index-footer {
+    background-color: black;
+    color: white;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.index-footer a{
+    margin-left: 8px;
+    color: white;
+}
+.index-footer p{
+    margin: 10px auto;
+}
+.secret-code form{
+    margin-bottom: 500px;
+}
+.secret-code footer{
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: teal;
+    color: white;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.darken{
+    color: rgb(83, 78, 78);
+}
+.admin-instructions{
+    width: 60%;
+    min-width: 300px;
+    margin: 30px auto;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    padding: 5%;
+}
+.admin-instructions p{
+    text-align: center;
+    margin: 20px auto;
+}
+.admin-instructions h2{
+    text-align: left;
+}
+.under{
+    text-decoration: underline;
+    color: rgb(59, 58, 58);
+}
+.admin-instructions li{
+    color: rgb(59, 58, 58);
+}
+footer > p{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media(max-width: 500px){
+    .nav h1{
+        font-size: 14px;
+    }
+    .nav *{
+        margin: 0 1%;
+    }
+}
