@@ -46,6 +46,12 @@ app.use(session({
 }));
 app.use(flash());
 
+app.use(function(req,res,next){
+    if(!req.session){
+        return next(new Error('Oh no')) //handle error
+    }
+    next() //otherwise continue
+    });
 //get models
 var Messages = require("./models/Messages");
 
