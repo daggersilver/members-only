@@ -40,7 +40,7 @@ app.use(bodyParser.json())
 //flash middleware
 app.use(cookieParser('keyboard cat'));
 app.use(session({
-    secret: process.env.SECRET,
+    secret: "dlfjsdfjsdfjsfj",
     resave: true,
     saveUninitialized: true,
 }));
