@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const mongoose = require("mongoose");
 const path = require("path");
-const mongoURL = require("./config/db")
+const mongoURL = require("./config/db") || 'mongodb://localhost:27017/membersOnly';
 const port = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const flash = require('express-flash');
