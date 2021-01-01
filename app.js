@@ -77,9 +77,7 @@ app.use("/", generalRoutes)
 
 //404 route
 app.get("*", (req, res)=>{
-    if(err){
-        res.status(404).send("<h1>Page you are looking for doesn't exists</h1>");
-    }
+    res.status(404).send("<h1>Page you are looking for doesn't exists</h1>");
 })
 
 app.listen(port);
