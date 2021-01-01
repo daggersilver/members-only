@@ -1,7 +1,7 @@
 
 const mongoose = require("mongoose");
 const path = require("path");
-const mongoURL = `mongodb+srv://dagger:${process.env.PASSWORD}@cluster0.s6okb.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
+const mongoURL = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.s6okb.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
 const port = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const flash = require('express-flash');
@@ -39,7 +39,7 @@ app.use(bodyParser.json())
 //flash middleware
 app.use(cookieParser('keyboard cat'));
 app.use(session({
-    secret: "lsjfsjfjijef",
+    secret: process.env.SECRET,
     resave: true,
     saveUninitialized: true,
 }));
