@@ -242,6 +242,7 @@ input:focus, button:focus, textarea:focus{
 }
 .index-footer p{
     margin: 10px auto;
+    text-align: center;
 }
 .secret-code form{
     margin-bottom: 500px;
