@@ -1,8 +1,7 @@
-require("dotenv").config();
 
 const mongoose = require("mongoose");
 const path = require("path");
-const mongoURL ='mongodb://localhost:27017/membersOnly';
+const mongoURL = "mongodb://localhost/membersOnly"
 const port = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const flash = require('express-flash');
@@ -40,18 +39,12 @@ app.use(bodyParser.json())
 //flash middleware
 app.use(cookieParser('keyboard cat'));
 app.use(session({
-    secret: "dlfjsdfjsdfjsfj",
+    secret: "lsjfsjfjijef",
     resave: true,
     saveUninitialized: true,
 }));
 app.use(flash());
 
-app.use(function(req,res,next){
-    if(!req.session){
-        return next(new Error('Oh no')) //handle error
-    }
-    next() //otherwise continue
-    });
 //get models
 var Messages = require("./models/Messages");
 
