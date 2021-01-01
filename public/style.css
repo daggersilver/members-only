@@ -288,8 +288,32 @@ footer > p{
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
-
+.errorpage{
+    background-color: red;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.errorpage *{
+    margin-top: 30px;
+    text-align: center;
+}
+.errorpage a{
+    color: white;
+}
+.errorpage h1{ 
+    font-size: 80px;
+}
+.errorpage h2{
+    font-size: 50px;
+}
+.errorpage p{
+    font-size: 30px;
+}
 @media(max-width: 500px){
     .nav h1{
         font-size: 14px;

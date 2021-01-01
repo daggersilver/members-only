@@ -1,7 +1,9 @@
+require("dotenv").config("./.env");
 
 const mongoose = require("mongoose");
 const path = require("path");
-const mongoURL = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.s6okb.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
+const mongoURL = `mongodb+srv://${process.env.MONGO_USER}:${process.env.PASSWORD}@cluster0.s6okb.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
+
 const port = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const flash = require('express-flash');
@@ -77,7 +79,7 @@ app.use("/", generalRoutes)
 
 //404 route
 app.get("*", (req, res)=>{
-    res.status(404).send("<h1>Page you are looking for doesn't exists</h1>");
+    res.status(404).render("404");
 })
 
 app.listen(port);
