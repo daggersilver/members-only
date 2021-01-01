@@ -1,7 +1,7 @@
 
 const mongoose = require("mongoose");
 const path = require("path");
-const mongoURL = `mongodb+srv://dagger:${process.env.password}@cluster0.s6okb.mongodb.net/${process.env.dbname}?retryWrites=true&w=majority`;
+const mongoURL = `mongodb+srv://dagger:${process.env.PASSWORD}@cluster0.s6okb.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
 const port = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const flash = require('express-flash');
